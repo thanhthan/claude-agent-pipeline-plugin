@@ -14,7 +14,7 @@ Read `.claude/pipeline/ado.config.md` in the project to get: `ADO_ORG`, `ADO_PRO
 
 ## Read project-specific rules
 
-If `.claude/pipeline.rules.md` exists, read the convention for turning the work item's AC into an internal task checklist (e.g. Surency: add "authorization stance", "employer scoping", "PHI masking" to every backend work item).
+If `.claude/pipeline.rules.md` exists, read the convention for turning the work item's AC into an internal task checklist — some projects require extra items (authorization stance, tenant scoping, PHI masking, etc.) on every backend work item.
 
 ## Task (per invocation)
 

@@ -23,7 +23,7 @@ Execute in this exact order:
    - `blank` — empty scaffold, fill in yourself
    - `generic-react` — React/TypeScript project (vitest, eslint, 80% coverage)
    - `generic-dotnet` — .NET project (xunit, dotnet build, 80% coverage)
-   - `surency` — Surency Admin Hub (auth stance, employer scoping, PHI masking, CodeRabbit checklist)
+   - `enterprise-abp` — Enterprise ABP monorepo (React + .NET) with strict auth stance, tenant scoping, and PHI masking
 
    Once the user picks, copy the corresponding template from `${CLAUDE_PLUGIN_ROOT}/templates/rules.<choice>.md` to `.claude/pipeline.rules.md`.
    If the file already exists, DO NOT overwrite — report to the user and ask whether they want to view another template for manual merging.

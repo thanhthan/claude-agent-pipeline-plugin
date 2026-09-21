@@ -4,7 +4,7 @@ Multi-agent auto-task pipeline for **Claude Code**, packaged as an installable p
 
 Four coordinated subagents — `planner` → `coder` → `reviewer` → `tester` — pass work through `pipeline/tasks/{pending,review,testing,done}/` on disk. Optional ticket-integration agents pull work directly from **Jira Cloud**, **Azure DevOps Boards**, or **GitHub Issues** and hand results back at the end.
 
-Every project can override the base agents' behavior with a single file: `.claude/pipeline.rules.md`. Ship-ready templates are included for React/TypeScript, .NET, and a Surency Admin Hub preset.
+Every project can override the base agents' behavior with a single file: `.claude/pipeline.rules.md`. Ship-ready templates are included for React/TypeScript, .NET, and an enterprise ABP monorepo preset.
 
 ---
 
@@ -38,7 +38,7 @@ Run once per project:
 /pipeline-init jira ado     # combine multiple sources
 ```
 
-The command creates `pipeline/tasks/{pending,review,testing,done}/`, asks you which rules template to seed `.claude/pipeline.rules.md` from (blank / generic-react / generic-dotnet / surency), and copies the ticket-integration config into `.claude/pipeline/<source>.config.md` when requested.
+The command creates `pipeline/tasks/{pending,review,testing,done}/`, asks you which rules template to seed `.claude/pipeline.rules.md` from (blank / generic-react / generic-dotnet / enterprise-abp), and copies the ticket-integration config into `.claude/pipeline/<source>.config.md` when requested.
 
 ---
 
@@ -97,7 +97,7 @@ Bundled templates in `plugins/agent-pipeline/templates/`:
 | `rules.blank`       | Empty scaffold to fill in yourself.                                  |
 | `rules.generic-react` | React/TypeScript + vitest + eslint + 80% coverage.                 |
 | `rules.generic-dotnet` | .NET + xUnit + `dotnet build --warnaserror` + 80% coverage.       |
-| `rules.surency`     | Surency Admin Hub: auth stance, employer scoping, PHI masking, CodeRabbit checklist. |
+| `rules.enterprise-abp` | Enterprise ABP monorepo (React + .NET): strict auth stance, tenant scoping, PHI masking, automated-review checklist. |
 
 ---
 
@@ -118,7 +118,7 @@ plugins/agent-pipeline/
 │   └── human-ticket-voice/SKILL.md   # anti-AI-tell writing checklist for public comments
 └── templates/
     ├── rules.blank.md         rules.generic-react.md
-    ├── rules.generic-dotnet.md rules.surency.md
+    ├── rules.generic-dotnet.md rules.enterprise-abp.md
     ├── jira.config.md         ado.config.md      github.config.md
 ```
 

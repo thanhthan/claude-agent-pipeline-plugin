@@ -14,7 +14,7 @@ Read `.claude/pipeline/jira.config.md` in the project to get: `JIRA_SITE`, `PROJ
 
 ## Read project-specific rules
 
-If `.claude/pipeline.rules.md` exists, read the section about how to convert Jira summary/description into an internal task (e.g. Surency requires adding "authorization stance" and "employer scoping" checklist items to every backend task).
+If `.claude/pipeline.rules.md` exists, read the section about how to convert the Jira summary/description into an internal task — some projects require extra checklist items (authorization stance, tenant scoping, PHI masking, etc.) on every backend task.
 
 ## Task (per invocation)
 
