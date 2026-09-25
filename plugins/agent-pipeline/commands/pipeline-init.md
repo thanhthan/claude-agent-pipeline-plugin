@@ -21,7 +21,8 @@ Execute in this exact order:
 
 2. **Create `.claude/pipeline.rules.md`** — if the file does NOT already exist, ASK the user to pick a template:
    - `blank` — empty scaffold, fill in yourself
-   - `generic-react` — React/TypeScript project (vitest, eslint, 80% coverage)
+   - `generic-react` — React/TypeScript **web** project (vitest, eslint, 80% coverage)
+   - `react-native` — bare React Native / TypeScript (Jest + RNTL, Maestro, pnpm/Metro monorepo traps, field & accessibility rules). Pick this over `generic-react` for a mobile app — that template assumes a DOM, so its `aria-*` and `dangerouslySetInnerHTML` rules do not apply
    - `generic-dotnet` — .NET project (xunit, dotnet build, 80% coverage)
    - `enterprise-abp` — Enterprise ABP monorepo (React + .NET) with strict auth stance, tenant scoping, and PHI masking
 
