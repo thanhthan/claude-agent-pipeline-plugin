@@ -1,6 +1,6 @@
 {
   "name": "agent-pipeline",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Multi-agent auto-task pipeline for Claude Code: planner → coder → reviewer → tester, orchestrated through pipeline/tasks/{pending,review,testing,done}/. Optional Jira / Azure DevOps / GitHub Issues ticket ingestion. Configurable per project via .claude/pipeline.rules.md.",
   "author": {
     "name": "Than Thanh Nguyen",
