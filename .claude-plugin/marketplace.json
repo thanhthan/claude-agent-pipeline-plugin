@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Multi-agent auto-task pipeline for Claude Code (planner → coder → reviewer → tester) with optional Jira / Azure DevOps / GitHub Issues ticket ingestion. Configurable per project via a single .claude/pipeline.rules.md overlay.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "agent-pipeline",
       "source": "./plugins/agent-pipeline",
       "description": "Base pipeline: planner/coder/reviewer/tester + optional jira/ado/github ingestion + human-ticket-voice skill. Overlay project-specific rules via .claude/pipeline.rules.md.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "category": "workflow",
       "keywords": ["pipeline", "agents", "workflow", "jira", "ado", "azure-devops", "github-issues", "tdd"]
     }

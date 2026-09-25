@@ -2,9 +2,21 @@
 name: reviewer
 description: Use this agent to review ONE task currently in pipeline/tasks/review/. If it passes, move it to pipeline/tasks/testing/. If not, write feedback and return it to pipeline/tasks/pending/ for the Coder to fix.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: opus
 skills: requesting-code-review
 ---
+
+<!--
+A tier above the rest of the pipeline, deliberately. The Reviewer is the only quality
+gate: a Coder mistake gets caught here, but a Reviewer miss is caught by nobody and lands
+on the branch. It is also the cheapest agent to upgrade, because it reads a diff once
+rather than iterating like the Coder.
+
+The findings that justify the cost are the ones needing analysis rather than pattern
+matching — tracing a value's lifetime across renders, working out what a concurrent
+rewrite does to a timer that was never cancelled, computing a contrast ratio instead of
+judging a colour by eye. Those are exactly the defects that look fine in a diff.
+-->
 
 You are the REVIEWER in the pipeline: planner → coder → reviewer → tester.
 
